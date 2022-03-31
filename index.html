@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="script.js"></script>
+	<title>Calc</title>
+</head>
+<body>
+	<div id="Calc">
+	<div id="top">
+		<div id="name">CALC</div>
+		<button id="recent" onclick="recent()" title="Recents"><i class="fa-solid fa-clock-rotate-left"></i></button>
+	</div>
+	<div id="dispall">
+		<div id="toptext"> </div>
+		<div id="display">
+			0
+		</div>
+	</div>
+	
+	<div id="hide">
+		<div id="history">
+			<ul id="his_list">
+			</ul>
+		</div>
+	</div>
+	<div id="num-pad">
+		<div>
+			<button class="operator" onclick="controls('%')">%</button>
+			<button class="operator" onclick="beforePoint()">.x</button>
+			<button class="operator" onclick="controls('C')">C</button>
+			<button class="operator" onclick="backspace('x')" id="del">x</button>
+		</div>
+		<div>
+			<button class="operator" onclick="controls('fraction')">1 / x</button>
+			<button class="operator" onclick="controls('sq')">x<sup>2</sup></button>
+			<button class="operator" onclick="controls('sqrt')">&#8730 x</button>
+			<button class="operator" onclick="controls('/')">/</button>
+		</div>
+		<div>
+			<button class="digit" onclick="dis('7')">7</button>
+			<button class="digit" onclick="dis('8')">8</button>
+			<button class="digit" onclick="dis('9')">9</button>
+			<button class="operator" onclick="controls('*')">*</button>
+		</div>
+		<div>
+			<button class="digit" onclick="dis('4')">4</button>
+			<button class="digit" onclick="dis('5')">5</button>
+			<button class="digit" onclick="dis('6')">6</button>
+			<button class="operator" onclick="controls('-')">-</button>
+		</div>
+		<div>
+			<button class="digit" onclick="dis('1')">1</button>
+			<button class="digit" onclick="dis('2')">2</button>
+			<button class="digit" onclick="dis('3')">3</button>
+			<button class="operator" onclick="controls('+')">+</button>
+		</div>
+		<div>
+			<button class="digit" onclick="controls('neg')">+/-</button>
+			<button class="digit" onclick="dis('0')">0</button>
+			<button class="digit" onclick="disDot()">.</button>
+			<button class="operator" onclick="ans_display()" id="ansbut">=</button>
+		</div>
+	</div>
+	</div>
+	
+</body>
+</html>

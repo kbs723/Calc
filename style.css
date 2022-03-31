@@ -1,0 +1,273 @@
+body{
+    margin-top:25px; 
+}
+:root{
+    --bgColor:#d6a8f9;
+    --butBgColor:#B009AC;
+    --editColor:green;
+    --delColor:red;
+    --listBgColor:#3e143e1a;
+    --operatorBgColor:#3e143e;
+    --hoverBgColor:white;
+    --dispBgColor:white;
+    --dispColor:black;
+    --dispTopColor: rgb(122, 122, 122);
+    --nameColor:azure;
+    --hisAnsColor:yellow;
+    --dateColor:rgb(255, 255, 255);
+    --shadowgreen:rgb(146 180 146);
+    --shadowred:rgb(248, 147, 147);
+    --shadowwhite:rgb(165, 162, 162);
+}
+#Calc{
+    min-width: 250px;
+    max-width: 280px;
+    margin: 10px auto;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bgColor);
+    border-radius: 10px;
+    border: 2px solid var(--bgColor);
+    box-shadow: -5px -4px 4px -2px rgb(0 0 0 / 50%);
+}
+#num-pad{
+    max-width: 280px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+#hide{
+    max-width: 280px;
+    height: 300px;
+    flex-direction: column;
+    background-color: var(--bgColor);
+    padding: 5px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: none;
+    overflow: auto;
+    
+}
+#num-pad div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#num-pad button{
+    box-shadow: 1px 0px 1px 1px rgb(0 0 0 / 75%) inset;
+}
+div button{
+    height: 34px;
+    width: 52px;
+    background-color: var(--butBgColor);
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 25px;
+    border: none;
+    transition: 0.35s;
+}
+.delBut,.editBut{
+    color: var(--delColor);
+    background-color: var(--hoverBgColor);
+    height: 23px;
+    width: 23px;
+    /* border: 1px solid white; */
+    border-radius: 100%;
+    text-align: center;
+    align-items: center;
+    border-bottom: 2px solid var(--shadowwhite);
+    border-right: 2px solid var(--shadowwhite);
+}
+.editBut{
+    color: var(--editColor);
+    margin-right: 5px;
+}
+.editBut:hover{
+    background-color: var(--editColor);
+    color: var(--hoverBgColor);
+    border-bottom: 2px solid var(--shadowgreen);
+    border-right: 2px solid var(--shadowgreen);
+}
+.delBut:hover{
+    background-color: var(--delColor);
+    color: var(--hoverBgColor);
+    border-bottom: 2px solid var(--shadowred);
+    border-right: 2px solid var(--shadowred);
+}
+
+
+#display{
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--dispBgColor);
+    color: var(--dispColor);
+    height: 2rem;
+    overflow: hidden;
+    font-size: 120%;
+    padding: 0px 10px;
+    border-left: solid 5px var(--bgColor);
+    border-right: solid 5px var(--bgColor);
+    align-items: center;
+    box-shadow: 0px -15px 5px -15px rgb(0 0 0) inset;
+    
+}
+#display:hover{
+    overflow-x: auto;
+}
+#toptext{
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--dispBgColor);
+    color:var(--dispTopColor);
+    height: 1rem;
+    font-size: 12px;
+    font-weight: bold;
+    overflow-wrap: normal;
+    padding: 5px 10px;
+    border-left: solid 5px var(--bgColor);
+    border-right: solid 5px var(--bgColor);
+    border-bottom: 0px;
+    overflow: auto;
+    /* box-shadow: 0px 14px 5px -16px rgb(0 0 0) inset; */
+}
+div button:hover{
+    background-color: var(--hoverBgColor);
+    color: var(--operatorBgColor);
+}
+.operator{
+    background-color: var(--operatorBgColor);
+}
+#ansbut{
+    background-color: var(--editColor);
+    color:var(--hoverBgColor);
+    border: none;
+}
+#ansbut:hover{
+    background-color:var(--hoverBgColor);
+    color: var(--editColor);
+}
+#del{
+    background-color: var(--delColor);
+    color: var(--hoverBgColor);
+    border: none;
+}
+#del:hover{
+    background-color:var(--hoverBgColor);
+    color: var(--delColor);
+}
+#top{
+    background-color: var(--bgColor);
+    color: var(--hoverBgColor);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    align-items: center;
+    font-weight: bolder;
+
+}
+#name{
+    padding: 15px;
+    font-weight: bolder;
+    color: var(--nameColor);
+}
+#name{
+    padding-left: 30px;
+}
+#recent{
+    padding-right: 30px;
+    box-shadow: 1px 0px 1px 1px rgb(0 0 0 / 75%) inset;
+}
+#recent:hover{
+    cursor: pointer;
+}
+.ulList
+{
+    transition: 2s;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: var(--bgColor);
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 1px 0px 0px 1px rgb(0 0 0 / 15%) inset;
+}
+.ulList:hover{
+    /* transform: scale(1.025); */
+    overflow: auto;
+}
+.ulList span{
+    padding: 2px;
+}
+#his_list{
+    padding: 0;
+}
+#recent{
+    padding: 0;
+    margin-right: 10px;
+    background-color: var(--operatorBgColor);
+    color: var(--hoverBgColor);
+    
+}
+#recent:hover{
+    background-color: var(--hoverBgColor);
+    color: var(--operatorBgColor);
+}
+.operatorHis{
+    color: var(--dispColor);
+}
+.ansHis{
+    color: var(--hoverBgColor);
+}
+::-webkit-scrollbar {
+    z-index: 100;
+    background-color: var(--butBgColor);
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-thumb {
+      background: var(--hoverBgColor);
+      border-right: var(--bgColor) 0.5px solid;
+}
+::-webkit-scrollbar-thumb:hover {
+      background: var(--operatorBgColor);
+      border-right: rgba(0,0,0,0.5) 0.5px solid;
+}
+.dateList{
+    background-color: var(--hoverBgColor);
+    font-weight: bolder;
+    color: var(--operatorBgColor);
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    left: 0;
+    box-shadow: -1px 1px 1px 0px rgb(0 0 0 / 52%) inset;
+    position: sticky;
+
+    
+}
+.dateList span{
+    margin: 0px 10px;
+}
+.opHis,.operatorHis,.ansHis{
+    font-size: large;
+}
