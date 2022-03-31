@@ -44,11 +44,11 @@
 				dis('.');
 				op1Dot=true;
 			}
-			else if(operant2=='' && !op2Dot && op1Dot && operator!=''){
+			else if(operant2=='' && !op2Dot && operator!=''){
 				dis('0.');
 				op2Dot=true;
 			}
-			else if(!op2Dot && op1Dot && operator!=''){
+			else if(!op2Dot && operator!=''){
 				dis('.');
 				op2Dot=true;
 			}
@@ -127,8 +127,8 @@
 		}
 		
 		function ans_display() {
-			op1=parseInt(operant1);
-			op2=parseInt(operant2);
+			op1=Number(operant1);
+			op2=Number(operant2);
 			let ans=op1;
 			if(operant1 !='' && operant2 !='' && operator!=''){
 				ans=eval(operant1+operator+operant2);
